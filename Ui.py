@@ -3,8 +3,8 @@ from tkinter import *
 from tkinter import ttk
 from PIL import ImageTk,Image
 
-username='rishikeshsahoo_2828'
-password='32416282rishi'
+username='YOURUSERNAME'
+password='YOUPASSWORD'
 
 L=instaloader.Instaloader()
 L.login(username,password)
