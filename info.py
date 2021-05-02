@@ -2,9 +2,12 @@ import instaloader
 from tkinter import *
 from secreats import username,password
 
+#maing instance of class Instaloader
 L=instaloader.Instaloader()
+#username and password are imported from secreats.py
 L.login(username,password)
 
+#making instance of profile
 profile=instaloader.Profile.from_username(L.context,username)
 
 print(profile.username)
@@ -26,7 +29,7 @@ root.mainloop()
 
 # posts.url, posts.caption, posts.likes, posts.comments
 
-# post_mgs="Url: {}\n\nCaption: {}\nLikes: {}\nComments: {}"
+
 
 for post in profile.get_posts():
     L.download_post(post, target=profile.username)
